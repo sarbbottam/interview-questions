@@ -1,13 +1,38 @@
 import {assert} from 'chai';
-import flatten from '../src/array-flatten';
+import * as flattenMethods from '../src/array-flatten';
 
 describe('array-flatten', () => {
   
-  it('should flatten the array', () => {
-    assert.deepEqual(
-      [1, 2, 3, 4, 5], 
-      flatten([1, 2, 3, 4, 5])
-    );    
+  Object.keys(flattenMethods).forEach((method) => {
+    
+    it(`should flatten array ${method}`, () => {
+      assert.deepEqual(
+        [1, 2, 3, 4, 5], 
+        flattenMethods[method]([1, 2, 3, 4, 5])
+      ); 
+      
+      assert.deepEqual(
+        [1, 2, 3, 4, 5], 
+        flattenMethods[method]([1, [2, 3], [4], 5])
+      );  
+      
+      assert.deepEqual(
+        [1, 2, 3, 4, 5], 
+        flattenMethods[method]([1, [2, [3, 4]], 5])
+      );
+      
+      assert.deepEqual(
+        [1, 2, 3, 4, 5], 
+        flattenMethods[method]([1, [2, [3, [4]]], 5])
+      );
+      
+      assert.deepEqual(
+        [1, 2, 3, {d:4}, 5], 
+        flattenMethods[method]([1, [2, [3, {d:4}]], 5])
+      );  
+        
+    });
+  
   });
   
 });
