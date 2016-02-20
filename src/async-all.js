@@ -3,13 +3,14 @@
  * the last function will be a callback function 
  * that needs to be executed once all other functions are done
  */
+
 import async from 'async';
 
 export const promisify = (...args) => {
   let callback = args.pop();
-  let promiseArray = args.map((fn) => {
+  let promiseArray = args.map((func) => {
     return new Promise((resolve) => {
-      fn(resolve);
+      func(resolve);
     });
   });  
   Promise.all(promiseArray)
@@ -28,5 +29,5 @@ export const asyncify = (...args) => {
 
 export const oldschoolify = (...args) => {
   let callback = args.pop();
-  args.forEach((fn) => fn(callback));
+  args.forEach((func) => func(callback));
 };
