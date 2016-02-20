@@ -1,4 +1,4 @@
-[
+export default [
   'async-all',
   'array-flatten',
   'debounce',
@@ -11,4 +11,4 @@
   'max-sub-array',
   'array-dedup',
   'relative-node'
-]
+];
