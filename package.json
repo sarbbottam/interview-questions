@@ -10,7 +10,9 @@
     "watch-babel": "nodemon --watch src --exec 'npm run babel'",
     "watch": "npm run babel && (npm run watch-babel)"
   },
-  "keywords": ["interview questions"],
+  "keywords": [
+    "interview questions"
+  ],
   "author": "Sarbbottam Bandyopadhyay",
   "license": "MIT",
   "devDependencies": {
@@ -21,5 +23,8 @@
     "chai": "^3.4.1",
     "eslint": "^1.10.2",
     "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "async": "^1.5.2"
   }
 }
