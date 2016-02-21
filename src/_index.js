@@ -8,6 +8,7 @@ export default [
   'array-intersection',
   'anagram',  
   'html-node-contains',
+  'tax-calculator',
   'max-sub-array',
   'array-dedup',
   'relative-node'
