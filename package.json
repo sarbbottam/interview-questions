@@ -5,7 +5,9 @@
   "main": "",
   "scripts": {
     "lint": "eslint ./src/* ./test/*",
-    "test": "npm run lint && mocha --compilers js:babel-core/register",
+    "unit-test": "nyc --reporter=lcov mocha --compilers js:babel-core/register",
+    "coverage": "nyc check-coverage --statement 100 --branches 100 --function 100 --lines 100",
+    "test": "npm run lint && npm run unit-test --coverage && npm run coverage",
     "babel": "babel src --out-dir dist",
     "watch-babel": "nodemon --watch src --exec 'npm run babel'",
     "watch": "npm run babel && (npm run watch-babel)"
@@ -24,6 +26,7 @@
     "eslint": "^1.10.2",
     "jsdom": "^8.0.4",
     "mocha": "^2.3.4",
+    "nyc": "^6.0.0",
     "sinon": "^1.17.3"
   },
   "dependencies": {
