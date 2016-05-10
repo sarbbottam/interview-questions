@@ -4,13 +4,9 @@
   "description": "interview-questions",
   "main": "",
   "scripts": {
-    "lint": "xo",
-    "unit-test": "nyc --reporter=lcov mocha --compilers js:babel-core/register",
-    "coverage": "nyc check-coverage --statement 100 --branches 100 --function 100 --lines 100",
-    "test": "npm run lint && npm run unit-test --coverage && npm run coverage",
-    "babel": "babel src --out-dir dist",
-    "watch-babel": "nodemon --watch src --exec 'npm run babel'",
-    "watch": "npm run babel && (npm run watch-babel)"
+    "test": "xo && nyc --reporter=lcov --reporter=text --exclude src/ mocha",
+    "check-coverage": "nyc check-coverage --statement 100 --branches 100 --function 100 --lines 100",
+    "report-coverage": "cat ./coverage/lcov.info | codecov"
   },
   "keywords": [
     "interview questions"

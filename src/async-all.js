@@ -4,9 +4,9 @@
  * that needs to be executed once all other functions are done
  */
 
-import async from 'async';
+const async = require('async');
 
-export const promisify = (...args) => {
+const promisify = (...args) => {
   const callback = args.pop();
   const promiseArray = args.map(func => {
     return new Promise(resolve => {
@@ -17,7 +17,7 @@ export const promisify = (...args) => {
     .then(callback);
 };
 
-export const asyncify = (...args) => {
+const asyncify = (...args) => {
   const callback = args.pop();
 
   async.parallel(
@@ -26,7 +26,13 @@ export const asyncify = (...args) => {
   );
 };
 
-export const oldschoolify = (...args) => {
+const oldschoolify = (...args) => {
   const callback = args.pop();
   args.forEach(func => func(callback));
+};
+
+module.exports = {
+  promisify,
+  asyncify,
+  oldschoolify
 };

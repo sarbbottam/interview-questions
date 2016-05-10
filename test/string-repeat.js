@@ -1,5 +1,5 @@
-import {assert} from 'chai';
-import stringRepeat from '../src/string-repeat';
+const assert = require('chai').assert;
+const stringRepeat = require('../src/string-repeat');
 
 describe('string-repeat', () => {
   it(`should repeat the string as per the count provided`, () => {

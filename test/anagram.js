@@ -1,5 +1,5 @@
-import {assert} from 'chai';
-import anagram from '../src/anagram';
+const assert = require('chai').assert;
+const anagram = require('../src/anagram');
 
 describe('anagram', () => {
   it(`should return the list of anagmars`, () => {

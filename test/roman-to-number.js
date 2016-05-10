@@ -1,5 +1,5 @@
-import {assert} from 'chai';
-import romanToNumber from '../src/roman-to-number';
+const assert = require('chai').assert;
+const romanToNumber = require('../src/roman-to-number');
 
 describe('roman-to-number', () => {
   it(`should convert roman to number`, () => {

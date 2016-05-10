@@ -1,6 +1,6 @@
-import {assert} from 'chai';
-import sinon from 'sinon';
-import debounce from '../src/debounce';
+const assert = require('chai').assert;
+const sinon = require('sinon');
+const debounce = require('../src/debounce');
 
 describe('debounce', () => {
   it(`should call the debounced function only once for a timeout`, done => {

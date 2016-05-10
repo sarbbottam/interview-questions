@@ -1,7 +1,7 @@
 /*
  * a function that will repeat a string as per the count provided
  */
-export default (string, count) => {
+module.exports = (string, count) => {
   let result = '';
   while (count > 0) {
     if (count % 2 === 1) {

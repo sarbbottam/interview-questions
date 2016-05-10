@@ -1,5 +1,5 @@
-import {assert} from 'chai';
-import * as flattenMethods from '../src/array-flatten';
+const assert = require('chai').assert;
+const flattenMethods = require('../src/array-flatten');
 
 describe('array-flatten', () => {
   Object.keys(flattenMethods).forEach(method => {

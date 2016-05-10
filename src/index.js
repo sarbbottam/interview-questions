@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   'async-all',
   'array-flatten',
   'debounce',

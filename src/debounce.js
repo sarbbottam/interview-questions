@@ -1,7 +1,7 @@
 /*
  * a function that will throttle the execution of an expensive function
  */
-export default (func, wait, immediate) => {
+module.exports = (func, wait, immediate) => {
   let timeout;
   return () => {
     const context = this;

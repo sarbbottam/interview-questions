@@ -1,5 +1,7 @@
-import {assert} from 'chai';
-import {promisify, asyncify, oldschoolify} from '../src/async-all';
+const assert = require('chai').assert;
+const promisify = require('../src/async-all').promisify;
+const asyncify = require('../src/async-all').asyncify;
+const oldschoolify = require('../src/async-all').oldschoolify;
 
 describe('async-all', () => {
   it(`promisify`, done => {

@@ -3,7 +3,7 @@
  * and return a flattened array
  */
 
-export const iteratively = array => {
+const iteratively = array => {
   for (let i = 0, l = array.length; i < l; i += 1) {
     if (Array.isArray(array[i])) {
       // if the item at ith index is an array
@@ -20,11 +20,16 @@ export const iteratively = array => {
   return array;
 };
 
-export const recursively = array => {
+const recursively = array => {
   return array.reduce((previous, current) => {
     return previous.concat(
       // if current item is an array flatten it
       Array.isArray(current) ? recursively(current) : current
     );
   }, []);
+};
+
+module.exports = {
+  iteratively,
+  recursively
 };

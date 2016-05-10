@@ -1,5 +1,5 @@
-import {assert} from 'chai';
-import reorder from '../src/array-reorder';
+const assert = require('chai').assert;
+const reorder = require('../src/array-reorder');
 
 describe('array-reorder', () => {
   it(`should reorder the array as per given order`, () => {

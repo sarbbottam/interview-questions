@@ -1,6 +1,6 @@
-import {assert} from 'chai';
-import jsdom from 'jsdom';
-import {contains} from '../src/html-node-contains';
+const assert = require('chai').assert;
+const jsdom = require('jsdom');
+const contains = require('../src/html-node-contains');
 
 describe('array-reorder', () => {
   const markup = `

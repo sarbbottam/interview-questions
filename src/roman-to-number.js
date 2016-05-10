@@ -19,7 +19,7 @@ const subtractiveHash = {
   C: {D: true, M: true}
 };
 
-export default string => {
+module.exports = string => {
   let result = 0;
 
   for (let i = 0, l = string.length; i < l; i += 1) {
