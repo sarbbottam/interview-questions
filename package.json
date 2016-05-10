@@ -4,7 +4,7 @@
   "description": "interview-questions",
   "main": "",
   "scripts": {
-    "lint": "eslint ./src/* ./test/*",
+    "lint": "xo",
     "unit-test": "nyc --reporter=lcov mocha --compilers js:babel-core/register",
     "coverage": "nyc check-coverage --statement 100 --branches 100 --function 100 --lines 100",
     "test": "npm run lint && npm run unit-test --coverage && npm run coverage",
@@ -27,9 +27,17 @@
     "jsdom": "^8.0.4",
     "mocha": "^2.3.4",
     "nyc": "^6.0.0",
-    "sinon": "^1.17.3"
+    "sinon": "^1.17.3",
+    "xo": "^0.15.0"
   },
   "dependencies": {
     "async": "^1.5.2"
+  },
+  "xo": {
+    "envs": [
+      "mocha"
+    ],
+    "esnext": true,
+    "space": true
   }
 }

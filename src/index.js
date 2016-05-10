@@ -6,7 +6,7 @@ export default [
   'roman-to-integer',
   'array-reorder',
   'array-intersection',
-  'anagram',  
+  'anagram',
   'html-node-contains',
   'tax-calculator',
   'max-sub-array',

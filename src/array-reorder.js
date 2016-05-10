@@ -7,17 +7,16 @@
  */
 
 export default (array, order) => {
-  
-  for( let i = 0, l = order.length; i < l; i += 1) {
-    if(order[i] !== i) {
-      let orderIndex = order[i];
+  for (let i = 0, l = order.length; i < l; i += 1) {
+    if (order[i] !== i) {
+      const orderIndex = order[i];
       order[i] = order[orderIndex];
       order[orderIndex] = orderIndex;
-      
-      let temp = array[i];
+
+      const temp = array[i];
       array[i] = array[orderIndex];
       array[orderIndex] = temp;
     }
   }
-  return array;    
+  return array;
 };

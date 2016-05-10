@@ -1,10 +1,9 @@
 import {assert} from 'chai';
-import jsdom  from 'jsdom';
+import jsdom from 'jsdom';
 import {contains} from '../src/html-node-contains';
 
 describe('array-reorder', () => {
-  
-  let markup = `
+  const markup = `
   <html>
     <head></head>
     <body>
@@ -19,13 +18,13 @@ describe('array-reorder', () => {
     </body>
   </html>
   `;
-  
-  let firstDocument = jsdom.jsdom(markup);
-  let secondDocument = jsdom.jsdom(markup);
-  let firstChild = firstDocument.querySelector('#child');
-  let secondChild = secondDocument.querySelector('#child'); 
-  
-  it(`retrun true if the parent node contains the child node`, () => {  
+
+  const firstDocument = jsdom.jsdom(markup);
+  const secondDocument = jsdom.jsdom(markup);
+  const firstChild = firstDocument.querySelector('#child');
+  const secondChild = secondDocument.querySelector('#child');
+
+  it(`retrun true if the parent node contains the child node`, () => {
     assert.isTrue(
       contains(firstDocument, firstChild)
     );
@@ -33,8 +32,8 @@ describe('array-reorder', () => {
       contains(secondDocument, secondChild)
     );
   });
-  
-  it(`retrun false if the parent node does not contain the child node`, () => {  
+
+  it(`retrun false if the parent node does not contain the child node`, () => {
     assert.isFalse(
       contains(firstDocument, secondChild)
     );
@@ -42,5 +41,4 @@ describe('array-reorder', () => {
       contains(secondDocument, firstChild)
     );
   });
-  
 });
