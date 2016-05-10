@@ -13,9 +13,7 @@ module.exports = (array, order) => {
       order[i] = order[orderIndex];
       order[orderIndex] = orderIndex;
 
-      const temp = array[i];
-      array[i] = array[orderIndex];
-      array[orderIndex] = temp;
+      [array[i], array[orderIndex]] = [array[orderIndex], array[i]];
     }
   }
   return array;
