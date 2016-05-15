@@ -1,7 +1,7 @@
 # interview-questions
 
 - [x] [anagram.js](src/anagram.js)
-- [ ] array-dedup.js
+- [x] [array-dedup.js](src/array-dedup.js)
 - [x] [array-flatten.js](src/array-flatten.js)
 - [x] [array-intersection.js](src/array-intersection.js)
 - [x] [array-reorder.js](src/array-reorder.js)
