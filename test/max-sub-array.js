@@ -27,5 +27,13 @@ describe('max-sub-array', () => {
       },
       maxSubArray([1, 2, 3, -6, 4, 5, 6])
     );
+    assert.deepEqual(
+      {
+        max: -1,
+        startIndex: 0,
+        endIndex: 0
+      },
+      maxSubArray([-1, -2, -3, -7, -4, -5, -6])
+    );
   });
 });

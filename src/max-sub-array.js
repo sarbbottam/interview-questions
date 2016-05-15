@@ -20,6 +20,10 @@ module.exports = array => {
     }
   }
 
+  if (startIndex > endIndex) {
+    startIndex = endIndex;
+  }
+
   return {
     max: maxSoFar,
     startIndex,
