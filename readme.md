@@ -12,5 +12,5 @@
 - [x] [max-sub-array.js](src/max-sub-array.js)
 - [x] [number-to-roman.js](src/number-to-roman.js)
 - [x] [roman-to-number.js](src/roman-to-number.js)
-- [ ] relative-node.js
+- [x] [relative-node.js](src/relative-node.js)
 - [x] [string-repeat.js](src/string-repeat.js)
