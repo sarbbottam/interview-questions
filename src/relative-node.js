@@ -1,8 +1,9 @@
 function getRelativeNode(targetTree, referenceNode) {
   const pathFromChildToRoot = [];
   let parentNode = referenceNode.parentNode;
+  let index;
   while (parentNode) {
-    let index = Array.from(parentNode.children).indexOf(referenceNode);
+    index = Array.from(parentNode.children).indexOf(referenceNode);
     pathFromChildToRoot.push(index);
     referenceNode = parentNode;
     parentNode = referenceNode.parentNode;
@@ -16,4 +17,4 @@ function getRelativeNode(targetTree, referenceNode) {
   return targetNode;
 }
 
-module.exports = relativeNode;
+module.exports = getRelativeNode;

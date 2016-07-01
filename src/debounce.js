@@ -1,21 +1,16 @@
 /*
  * a function that will throttle the execution of an expensive function
  */
-module.exports = (func, wait, immediate) => {
+module.exports = function (func, wait) {
   let timeout;
-  return () => {
+  return function () {
     const context = this;
     const args = arguments;
-    const later = () => {
-      func.apply(this, args);
-    };
-
-    /* istanbul ignore next */
-    if (immediate) {
+    function later() {
       func.apply(context, args);
-    } else {
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
     }
+
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
   };
 };

@@ -34,7 +34,7 @@ function numberToString(number, multiple) {
   return hash[1 * Number(multiple)] + hash[10 * Number(multiple)];
 }
 
-module.exports = number => {
+module.exports = function (number) {
   let thousand = Math.floor(number / 1000);
   number %= 1000;
   let hundred = Math.floor(number / 100);

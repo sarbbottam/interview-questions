@@ -6,7 +6,7 @@
 
 const async = require('async');
 
-const promisify = (...args) => {
+function promisify(...args) {
   const callback = args.pop();
   const promiseArray = args.map(func => {
     return new Promise(resolve => {
@@ -14,22 +14,22 @@ const promisify = (...args) => {
     });
   });
   Promise.all(promiseArray)
-    .then(callback);
-};
+  .then(callback);
+}
 
-const asyncify = (...args) => {
+function asyncify(...args) {
   const callback = args.pop();
 
   async.parallel(
     args,
     callback
   );
-};
+}
 
-const oldschoolify = (...args) => {
+function oldschoolify(...args) {
   const callback = args.pop();
   args.forEach(func => func(callback));
-};
+}
 
 module.exports = {
   promisify,

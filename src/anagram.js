@@ -3,7 +3,7 @@
  * and returns list of anagrams
  */
 
-module.exports = words => {
+module.exports = function (words) {
   const hash = {};
   let anagrams = [];
 

@@ -6,7 +6,7 @@
  * result = ['D', 'F', 'G', 'C', 'E'];
  */
 
-module.exports = (array, order) => {
+module.exports = function (array, order) {
   for (let i = 0, l = order.length; i < l; i += 1) {
     if (order[i] !== i) {
       const orderIndex = order[i];

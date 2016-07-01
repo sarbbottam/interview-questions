@@ -3,7 +3,7 @@
  * and returns an array with their intersection
  */
 
-module.exports = (firstArray, secondArray) => {
+module.exports = function (firstArray, secondArray) {
   const hash = {};
 
   firstArray.forEach(item => {

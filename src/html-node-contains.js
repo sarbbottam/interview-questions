@@ -1,4 +1,4 @@
-const contains = (parent, child) => {
+function contains(parent, child) {
   const parentNode = child.parentNode;
 
   if (parentNode === parent) {
@@ -12,6 +12,6 @@ const contains = (parent, child) => {
   }
 
   return false;
-};
+}
 
 module.exports = contains;
